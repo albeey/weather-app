@@ -41,9 +41,8 @@ function displayWeather() {
   document.querySelector(".date").innerText = getCurrentDate();
 
   const currentTime = new Date().getHours();
-  console.log(currentTime)
 
-  setBackground();
+  setBackground(currentTime);
 
   document.querySelector(".weatherImg").style.backgroundImage = `url('${getWeatherImage(currentTime)}')`;
 
@@ -62,8 +61,8 @@ function getWeatherImage(currentTime) {
 
 function setBackground(currentTime) {
   const body = document.querySelector("body");
-
-  if ((weather.description === "Rain" || weather.description === "Snow" || weather.description === "Thunderstorm") && currentTime < 20) {
+  
+  if (currentTime < 20 && (weather.description === "Rain" || weather.description === "Snow" || weather.description === "Thunderstorm")) {
     body.style.background = "rgb(135,152,203)";
     body.style.background = "radial-gradient(circle, rgba(135,152,203,1) 0%, rgba(114,120,138,1) 100%)";
   } else if (currentTime >= 7 && currentTime <= 18) {
