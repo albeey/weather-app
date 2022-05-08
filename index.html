@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="This is where your description goes">
+		<meta name="keywords" content="one, two, three">
+
+		<title>Weather App</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
+		<!-- fonts -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;500&family=Nunito:wght@400;500&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		
+		<script src="https://kit.fontawesome.com/550c21f1cf.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+
+		<section class="welcomeScreen">
+			<div class="welcomeImage"></div>
+			<h1>Weather<span>App</span></h1>
+			<button class="startBtn">Get Started</button>
+			<div class="loadingAnimation"></div>
+		</section>
+
+		<section class="weatherInfo">
+			<section class="place">
+				<span class="city"></span>
+				<span class="date">Sunday 22, November</span>
+				<span class="condition"></span>
+			</section>
+
+			<div class="weatherImg"></div>
+
+			<section class="weather">
+				<p class="minTemp">
+					<i class="fa-solid fa-angle-up"></i>
+					<span></span>
+				</p>
+
+				<p class="currentTemp">
+					<span class="temp"></span>
+				</p>
+
+				<p class="maxTemp">
+					<i class="fa-solid fa-angle-down"></i>
+					<span></span>
+				</p>
+			</section>
+		</section>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
