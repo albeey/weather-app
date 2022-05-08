@@ -25,15 +25,13 @@ function displayData() {
   setTimeout(() => getUserDetails(), 3000);
   setTimeout(() => getWeather(), 3500);
   setTimeout(() => displayWeather(), 5000);
-
-  setTimeout(() => {
-    console.log(userIp);
-    console.log(userDetails);
-    console.log(weather);
-  }, 4000);
 }
 
 function displayWeather() {
+  console.log(userIp);
+  console.log(userDetails);
+  console.log(weather);
+  
   document.querySelector(".welcomeScreen").style.display = "none";
   document.querySelector(".weatherInfo").style.display = "flex";
 
@@ -61,7 +59,7 @@ function getWeatherImage(currentTime) {
 
 function setBackground(currentTime) {
   const body = document.querySelector("body");
-  
+
   if (currentTime < 20 && (weather.description === "Rain" || weather.description === "Snow" || weather.description === "Thunderstorm")) {
     body.style.background = "rgb(135,152,203)";
     body.style.background = "radial-gradient(circle, rgba(135,152,203,1) 0%, rgba(114,120,138,1) 100%)";
