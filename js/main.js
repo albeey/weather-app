@@ -11,6 +11,7 @@ const weatherConditions = {
   Rain: { day: "../img/rain-day.png", night: "../img/rain-night.png" },
   Snow: { day: "../img/snow-day.png", night: "../img/snow-night.png" },
   Thunderstorm: { day: "../img/thunderstorm-day.png", night: "../img/thunderstorm-night.png" },
+  Haze: { day: "../img/haze-day.png", night: "../img/haze-night.png" },
   default: { day: "../img/default-day.png", night: "../img/default-night.png" },
 };
 
