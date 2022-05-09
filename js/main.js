@@ -6,13 +6,13 @@ let userDetails;
 let weather;
 
 const weatherConditions = {
-  Clear: { day: "../img/clear-day.png", night: "../img/clear-night.png" },
-  Clouds: { day: "../img/clouds-day.png", night: "../img/clouds-night.png" },
-  Rain: { day: "../img/rain-day.png", night: "../img/rain-night.png" },
-  Snow: { day: "../img/snow-day.png", night: "../img/snow-night.png" },
-  Thunderstorm: { day: "../img/thunderstorm-day.png", night: "../img/thunderstorm-night.png" },
-  Haze: { day: "../img/haze-day.png", night: "../img/haze-night.png" },
-  default: { day: "../img/default-day.png", night: "../img/default-night.png" },
+  Clear: { day: "\img/clear-day.png", night: "\img/clear-night.png" },
+  Clouds: { day: "\img/clouds-day.png", night: "\img/clouds-night.png" },
+  Rain: { day: "\img/rain-day.png", night: "\img/rain-night.png" },
+  Snow: { day: "\img/snow-day.png", night: "\img/snow-night.png" },
+  Thunderstorm: { day: "\img/thunderstorm-day.png", night: "\img/thunderstorm-night.png" },
+  Haze: { day: "\img/haze-day.png", night: "\img/haze-night.png" },
+  default: { day: "\img/default-day.png", night: "\img/default-night.png" },
 };
 
 const startBtn = document.querySelector(".startBtn");
