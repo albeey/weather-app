@@ -28,10 +28,6 @@ function displayData() {
 }
 
 function displayWeather() {
-  console.log(userIp);
-  console.log(userDetails);
-  console.log(weather);
-  
   document.querySelector(".welcomeScreen").style.display = "none";
   document.querySelector(".weatherInfo").style.display = "flex";
 
