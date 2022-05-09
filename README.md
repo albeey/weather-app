@@ -3,6 +3,8 @@
 
 Simple weather web application to reinforce what was learned about APIs, it displays the current weather based on IP address. 
 
+🔗 [Live Preview](https://albeey.github.io/weather-app/)
+
 ## APIs used:
 - [jsonip](https://getjsonip.com/#docs)
 - [Abstract](https://www.abstractapi.com/)
