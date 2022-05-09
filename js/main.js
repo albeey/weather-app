@@ -64,7 +64,7 @@ function setBackground(currentTime) {
   } else if (currentTime >= 7 && currentTime <= 18) {
     body.style.background = "rgb(141,173,255)";
     body.style.background = "radial-gradient(circle, rgba(141,173,255,1) 0%, rgba(74,121,243,1) 100%)";
-  } else if (currentTime >= 18 && currentTime <= 20) {
+  } else if (currentTime >= 18 && currentTime < 20) {
     body.style.background = "rgb(249,191,135)";
     body.style.background = "radial-gradient(circle, rgba(249,191,135,1) 0%, rgba(253,155,61,1) 100%)";
   }
