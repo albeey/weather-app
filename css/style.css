@@ -125,7 +125,6 @@ h1 > span {
 }
 
 /* weather Image */
-
 .weatherImg {
   background-color: transparent;
   background-position: center;
@@ -137,7 +136,6 @@ h1 > span {
 }
 
 /* weather Section */
-
 .weather {
   display: flex;
   justify-content: space-around;
@@ -152,6 +150,8 @@ h1 > span {
 }
 
 .minTemp, .maxTemp {
+  display: flex;
+  align-items: center;
   font-size: 3rem;
 }
 
@@ -163,3 +163,9 @@ h1 > span {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media screen and (max-width: 450px) {
+  .currentTemp {
+    font-size: 8rem;
+    margin: 0 40px;
+  }
+}
