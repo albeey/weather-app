@@ -23,8 +23,8 @@ function displayData() {
   document.querySelector(".loadingAnimation").style.display = "block";
 
   getUserIp();
-  setTimeout(() => getUserDetails(), 3000);
-  setTimeout(() => getWeather(), 3500);
+  setTimeout(() => getUserDetails(), 4000);
+  setTimeout(() => getWeather(), 4500);
   setTimeout(() => displayWeather(), 5000);
 }
 
