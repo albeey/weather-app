@@ -62,7 +62,7 @@ function setBackground(currentTime) {
   if (currentTime < 20 && (weather.description === "Rain" || weather.description === "Snow" || weather.description === "Thunderstorm")) {
     body.style.background = "rgb(135,152,203)";
     body.style.background = "radial-gradient(circle, rgba(135,152,203,1) 0%, rgba(114,120,138,1) 100%)";
-  } else if (currentTime >= 7 && currentTime <= 18) {
+  } else if (currentTime >= 7 && currentTime < 18) {
     body.style.background = "rgb(141,173,255)";
     body.style.background = "radial-gradient(circle, rgba(141,173,255,1) 0%, rgba(74,121,243,1) 100%)";
   } else if (currentTime >= 18 && currentTime < 20) {
