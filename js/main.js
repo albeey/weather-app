@@ -28,13 +28,13 @@ function displayData() {
 }
 
 function displayWeather() {
+  const currentTime = new Date();
+
   document.querySelector(".welcomeScreen").style.display = "none";
   document.querySelector(".weatherInfo").style.display = "flex";
 
   document.querySelector(".city").innerText = userDetails.city;
-  document.querySelector(".date").innerText = getCurrentDate();
-
-  const currentTime = new Date().getHours();
+  document.querySelector(".date").innerText = getCurrentDate(currentTime);
 
   setBackground(currentTime);
 
@@ -47,6 +47,7 @@ function displayWeather() {
 }
 
 function getWeatherImage(currentTime) {
+  currentTime = currentTime.getHours();
   const condition = weather.description in weatherConditions ? weather.description : "default";
   const dayTime = currentTime >= 8 && currentTime < 20 ? "day" : "night";
 
@@ -54,6 +55,7 @@ function getWeatherImage(currentTime) {
 }
 
 function setBackground(currentTime) {
+  currentTime = currentTime.getHours();
   const body = document.querySelector("body");
 
   if (currentTime < 20 && (weather.description === "Rain" || weather.description === "Snow" || weather.description === "Thunderstorm")) {
@@ -68,10 +70,8 @@ function setBackground(currentTime) {
   }
 }
 
-function getCurrentDate() {
-  const date = new Date();
-  const options = { weekday: "long", day: "numeric", month: "long" };
-  return date.toLocaleDateString(undefined, options);
+function getCurrentDate(date) {
+  return date.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
 }
 
 function getUserIp() {
