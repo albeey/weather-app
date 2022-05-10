@@ -23,9 +23,9 @@ function displayData() {
   document.querySelector(".loadingAnimation").style.display = "block";
 
   getUserIp();
-  setTimeout(() => getUserDetails(), 4000);
-  setTimeout(() => getWeather(), 4500);
-  setTimeout(() => displayWeather(), 5000);
+  setTimeout(() => getUserDetails(), 5000);
+  setTimeout(() => getWeather(), 5500);
+  setTimeout(() => displayWeather(), 6000);
 }
 
 function displayWeather() {
