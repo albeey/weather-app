@@ -1,7 +1,7 @@
 # Weather App
 **Project for 100devs**
 
-Simple weather web application to reinforce what was learned about APIs, it displays the current weather based on IP address. 
+Simple weather web application to reinforce what was learned about APIs, it displays the current weather based on the user geolocalization. 
 
 🔗 [Live Preview](https://albeey.github.io/weather-app/)
 
