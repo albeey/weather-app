@@ -1,7 +1,6 @@
 const ABSTRACT_IP_API = "de13d712c7624bba97e73279aa5b2ee7";
 const OPEN_WEATHER_API = "579ef5899a2078dd338306c337bfa4c2";
 
-let userIp;
 let userDetails;
 let weather;
 
@@ -15,6 +14,11 @@ const weatherConditions = {
   default: { day: "\img/default-day.png", night: "\img/default-night.png" },
 };
 
+document.addEventListener("DOMContentLoaded", function() {
+  getUserDetails();
+  setTimeout(() => getWeather(), 3000);
+});
+
 const startBtn = document.querySelector(".startBtn");
 startBtn.addEventListener("click", displayData);
 
@@ -22,10 +26,7 @@ function displayData() {
   startBtn.style.display = "none";
   document.querySelector(".loadingAnimation").style.display = "block";
 
-  getUserIp();
-  setTimeout(() => getUserDetails(), 5000);
-  setTimeout(() => getWeather(), 5500);
-  setTimeout(() => displayWeather(), 6000);
+  setTimeout(() => displayWeather(), 5000);
 }
 
 function displayWeather() {
@@ -34,7 +35,7 @@ function displayWeather() {
   document.querySelector(".welcomeScreen").style.display = "none";
   document.querySelector(".weatherInfo").style.display = "flex";
 
-  document.querySelector(".city").innerText = userDetails.city;
+  document.querySelector(".city").innerText = weather.city;
   document.querySelector(".date").innerText = getCurrentDate(currentTime);
 
   setBackground(currentTime);
@@ -75,31 +76,10 @@ function getCurrentDate(date) {
   return date.toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
 }
 
-function getUserIp() {
-  fetch("https://jsonip.com")
-    .then((res) => res.json())
-    .then((data) => {
-      userIp = data.ip;
-    })
-    .catch((err) => {
-      console.log(`error ${err}`);
-    });
-}
-
 function getUserDetails() {
-  fetch(`https://ipgeolocation.abstractapi.com/v1/?api_key=${ABSTRACT_IP_API}&ip_address=${userIp}`)
-    .then((res) => res.json())
-    .then((data) => {
-      userDetails = {
-        latitude: data.latitude,
-        longitude: data.longitude,
-        city: data.city,
-        country: data.country,
-      };
-    })
-    .catch((err) => {
-      console.log(`error ${err}`);
-    });
+  navigator.geolocation.getCurrentPosition(function (position) {
+    userDetails = { latitude: (lat = position.coords.latitude), longitude: position.coords.longitude };
+  });
 }
 
 function getWeather() {
@@ -107,6 +87,7 @@ function getWeather() {
     .then((res) => res.json())
     .then((data) => {
       weather = {
+        city: data.name, 
         temp: data.main.temp,
         minTemp: data.main.temp_min,
         maxTemp: data.main.temp_max, 
