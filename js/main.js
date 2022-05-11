@@ -1,4 +1,3 @@
-const ABSTRACT_IP_API = "de13d712c7624bba97e73279aa5b2ee7";
 const OPEN_WEATHER_API = "579ef5899a2078dd338306c337bfa4c2";
 
 let userDetails;
